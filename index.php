@@ -18,8 +18,8 @@ $mahasiswa = $db->View_Create("SELECT * FROM mahasiswa ORDER BY nama ASC");
 // seacrhing
 
 
-if( isset($_GET["search"]) ) {
-    $mahasiswa = $db->cari($_POST["cari"]);
+if(isset($_GET["cari"]) ) {
+    $mahasiswa = $db->cari($_GET["cari"]);
 }
 
 
@@ -59,12 +59,12 @@ if( isset($_GET["search"]) ) {
                     <div class="card-header ">
                         <!--  -->
                         <nav class="navbar navbar-light">
-                        <form action="" method="get">
+                        <form method="get">
                             <div class="form-group">
                                 <div class="input-group">
                                     <input type="text" name="cari" class="form-control sticky-top">
                                     <div class="input-group-prepend">
-                                        <button type="submit" name="search" class="rounded btn btn-primary sticky-top">Cari</button>
+                                        <button type="submit" class="rounded btn btn-primary sticky-top">Cari</button>
                                     </div>
                                 </div>
                             </div>
@@ -102,6 +102,7 @@ if( isset($_GET["search"]) ) {
                                     <td><?= $mhs['kelas'] ?></td>
                                     <td><?= $mhs['angkatan'] ?></td>
                                     <td><?= $mhs['semester'] ?></td>
+                                    <?php  ?>
                                     <td><a href="edit.php?U_ID=<?= $mhs['id']  ?>" class="btn btn-success">Edit</a></td>
                                     <td><a href="delete.php?D_ID=<?= $mhs['id'] ?>" class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data tersebut?');" >Delete</a></td>
                                     <td><a href="nilai.php?id=<?= $mhs['id'] ?>" class="btn btn-primary" >Data Nilai</a></td>

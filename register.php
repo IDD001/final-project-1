@@ -12,15 +12,15 @@ if(isset($_POST["submit"])){
 
   if($result == 1){
     echo
-    "<script> alert('Registration Successful'); </script>";
+    "<script> alert('Registrasi Berhasil'); </script>";
   }
   elseif($result == 10){
     echo
-    "<script> alert('Username or Email Has Already Taken'); </script>";
+    "<script> alert('Username Atau Email Sudah Ada'); </script>";
   }
   elseif($result == 100){
     echo
-    "<script> alert('Password Does Not Match'); </script>";
+    "<script> alert('Password Tidak Cocok'); </script>";
   }
 }
 ?>

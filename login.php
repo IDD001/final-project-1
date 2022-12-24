@@ -17,11 +17,11 @@ if(isset($_POST["submit"])){
   }
   elseif($result == 10){
     echo
-    "<script> alert('Wrong Password'); </script>";
+    "<script> alert('Password Salah'); </script>";
   }
   elseif($result == 100){
     echo
-    "<script> alert('User Not Registered'); </script>";
+    "<script> alert('Pengguna tidak terdaftar'); </script>";
   }
 }
 ?>

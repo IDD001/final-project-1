@@ -6,7 +6,7 @@ $db = new DbConfig();
 // this is register
 class Register extends Dbconfig{
     public function registration($nama, $username, $email, $password, $confirmpassword){
-      $duplicate = mysqli_query($this->connection, "SELECT * FROM users WHERE email = '$email'");
+      $duplicate = mysqli_query($this->connection, "SELECT * FROM users WHERE email = '$email' OR username = '$username' AND password = '$password'");
       if(mysqli_num_rows($duplicate) > 0){
         return 10;
         // email has already taken

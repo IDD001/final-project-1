@@ -158,17 +158,21 @@ class Operations extends Dbconfig{
 
 
     public function cari($keyword) {
-        $query = "SELECT * FROM mahasiswa
-                    WHERE
-                  nama LIKE '%$keyword%' OR
-                  nim LIKE '%$keyword%' 
-                --   email LIKE '%$keyword%' OR
-                --   jurusan LIKE '%$keyword%' OR
-                --   kelas LIKE '%$keyword%' OR
-                --   angkatan LIKE '%$keyword%' OR
-                --   semester LIKE '%$keyword%
-                ";
-        return $this->View_Create($query);
+        global $db;
+
+        $query = "SELECT * FROM mahasiswa";
+        $result = mysqli_query($db->connection, $query);
+
+        $arr = $result->fetch_all(MYSQLI_ASSOC);
+
+        $tmp = [];
+        foreach ($arr as $row) {
+            if (strtolower($row['nama']) == strtolower($keyword) || $row['nim'] == $keyword) {
+                $tmp[] = $row;
+            }
+        }
+
+        return $tmp;
     }
     
     // 
@@ -181,43 +185,23 @@ class Operations extends Dbconfig{
         return $result->fetch_assoc();
     }
 
-    public function Add_nilai($id, $data){
+    public function Update_nilai($id, $data){
         global $db;
-        $query = "INSERT INTO nilai (id_user , pbo, adbo, pweb, basdat, daa, imk) VALUE ($id, $data[pbo], $data[adbo], $data[pweb], $data[basdat], $data[daa], $data[imk])";
+        $sql = "UPDATE nilai SET 
+        pbo = '$data[pbo]', adbo = '$data[adbo]', pweb = '$data[pweb]', basdat = '$data[basdat]', daa = '$data[daa]', imk = '$data[imk]'      
+         WHERE id_user = $id";
 
-        $result = mysqli_query($db->connection, $query);
+        $result = mysqli_query($db->connection, $sql);
 
         return $result;
     }
 
-    public function Mencari_Data($keyword){
+    public function Add_nilai($id, $data){
         global $db;
-        if(isset($_GET['search'])){
-            $arr = array();
+        $query = "INSERT INTO nilai (id_user, pbo, adbo, pweb, basdat, daa, imk) VALUE ($id, $data[pbo], $data[adbo], $data[pweb], $data[basdat], $data[daa], $data[imk])";
 
-            // koneksi ke tabel mahasiswa
-            $sql = "SELECT * FROM  mahasiswa";
-            $result = mysqli_query($db->connection, $sql);
+        $result = mysqli_query($db->connection, $query);
 
-            // menmpilkan data yang ada di tabel mahasiswa
-            while ($row = mysqli_fetch_array($result)){
-                $arr[]=$row;
-            }
-            // variable
-            $status = false;
-            $key = $_GET['search']; //mengambil data ayangdicari 
-            $jumlah_data = count($arr); //menghitung jumlah data yang ada di dalam varible arr
-
-            // loping dengan for
-            for ($i=0; $i < $jumlah_data ; $i++) { 
-                #vaidasi jika ada data yang sama
-                if ($arr[$i]['id'] == $key) {
-                    echo $h = $arr[$i]['nama_cs'];
-                }
-            }
-            
-
-
-        }
+        return $result;
     }
 }
