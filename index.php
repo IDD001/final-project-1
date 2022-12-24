@@ -95,13 +95,13 @@ if(isset($_GET["cari"]) ) {
                             <?php $i = 1; ?>
                             <?php foreach($mahasiswa as $mhs) : ?>
                             <tr>
-                                    <td><?= $i; ?></td>
-                                    <td><?= $mhs['nama'] ?></td>
-                                    <td><?= $mhs['nim'] ?></td>
-                                    <td><?= $mhs['email'] ?></td>
-                                    <td><?= $mhs['kelas'] ?></td>
-                                    <td><?= $mhs['angkatan'] ?></td>
-                                    <td><?= $mhs['semester'] ?></td>
+                                    <td class="text-center"><?= $i; ?></td>
+                                    <td class="text-center"><?= $mhs['nama'] ?></td>
+                                    <td class="text-center"><?= $mhs['nim'] ?></td>
+                                    <td class="text-center"><?= $mhs['email'] ?></td>
+                                    <td class="text-center"><?= $mhs['kelas'] ?></td>
+                                    <td class="text-center"><?= $mhs['angkatan'] ?></td>
+                                    <td class="text-center"><?= $mhs['semester'] ?></td>
                                     <?php  ?>
                                     <td><a href="edit.php?U_ID=<?= $mhs['id']  ?>" class="btn btn-success">Edit</a></td>
                                     <td><a href="delete.php?D_ID=<?= $mhs['id'] ?>" class="btn btn-warning" onclick="return confirm('Apakah anda yakin ingin menghapus data tersebut?');" >Delete</a></td>

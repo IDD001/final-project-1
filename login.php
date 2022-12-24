@@ -49,9 +49,7 @@ if(isset($_POST["submit"])){
                     <input type="password" name="password" placeholder="Password" required value="">
                     <label for=""></label>
                 </div>
-                <div class="remember">
-                        <label for=""><input type="checkbox">Remember Me</label>      
-                </div>
+              
                 <button type="submit" name="submit">Sign</button>
                 <div class="signUp-link">
                     <p>Tidak Punya akun? <a href="register.php">SignUp</a></p>

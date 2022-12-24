@@ -34,17 +34,17 @@ if (isset($_POST['btn_save'])) {
             <div class="col-lg-6 m-auto">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <h2 class="text-center">Tambah Data Mahasiswa</h2>
+                        <h2 class="text-center">Tambah Data nilai Mahasiswa</h2>
                     </div>
                     
                         <div class="card-body">
                             <form method="POST">
                                 <input type="text" name="pbo" placeholder="Masukan Nilai pbo" class="form-control mb-2" required>
-                                <input type="text" name="adbo" placeholder="Masukan adbo" class="form-control mb-2" required>
-                                <input type="text" name="pweb" placeholder="Masukan pweb" class="form-control mb-2" required>
-                                <input type="text" name="basdat" placeholder="Masukan basdat" class="form-control mb-2" required>
-                                <input type="text" name="daa" placeholder="Masukan nilai daa" class="form-control mb-2" required>
-                                <input type="text" name="imk" placeholder="Masukan Smester IMK" class="form-control mb-2" required>
+                                <input type="text" name="adbo" placeholder="Masukan Nilai adbo" class="form-control mb-2" required>
+                                <input type="text" name="pweb" placeholder="Masukan Nilai pweb" class="form-control mb-2" required>
+                                <input type="text" name="basdat" placeholder="Masukan Nilai basdat" class="form-control mb-2" required>
+                                <input type="text" name="daa" placeholder="Masukan Nilai daa" class="form-control mb-2" required>
+                                <input type="text" name="imk" placeholder="Masukan Nilai imk" class="form-control mb-2" required>
                             </div>
                             <div class="card-footer">
                                 <button class="btn btn-success redirect" name="btn_save"> Save </button>    

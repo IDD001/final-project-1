@@ -26,7 +26,7 @@ $data = mysqli_fetch_assoc($result);
             <div class="col-lg-6 m-auto">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <h2 class="text-center">Tabel Data Mahasiswa Teknik Informatika</h2>
+                        <h2 class="text-center">Edit Data Mahasiswa</h2>
                         
                         
                     </div>
