@@ -1,0 +1,29 @@
+.footer {
+    background-color: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+.footer a{
+    margin-left: 30px;
+
+}
+
+.button{
+    background-color: rgb(139, 21, 0);
+    color: #fff;
+    height: 30px;
+    width: 120px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+.button:hover{
+    text-decoration:none ;
+    color: black;
+    
+}
+
+nav .fix {
+    position: fix !important;
+}
