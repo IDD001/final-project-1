@@ -93,7 +93,7 @@ class Operations extends Dbconfig{
             $semester = $db->check($_POST['semester']);
 
             if ($this->update_record($id,$nama,$nim,$email,$kelas,$angkatan, $semester)) {
-                $this->set_message('<div class="alert alert-success">Data Berhasil Ditambahkan!</div>');
+                $this->set_message('<div class="alert alert-success">Data Berhasil Di Update!</div>');
                 header("Location:index.php");
             }else{
             $this->set_message('<div class="alert alert-success">Data Gagal Ditambahkan!</div>');

@@ -34,7 +34,7 @@ $data = $db->Get_Nilai_Byid($id);
             <div class="col-lg-6 m-auto">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <h2 class="text-center">Tabel Data Mahasiswa Teknik Informatika</h2>
+                        <h2 class="text-center">Update Data mahasiswa</h2>
                         
                         
                     </div>

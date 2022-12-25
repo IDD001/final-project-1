@@ -20,27 +20,21 @@ body{
     border-radius: 20px;
     position: relative;
     width: 400px;
-    height: 500px;
+    height: 550px;
     background: rgba(255, 255, 255, .2);
     box-shadow: 0 0 50px rgba(0,0,0, .2);
-    padding: 40px;
+    padding: 30px;
 }
 
 .form-wrapper{
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 80%;
 }
 
-.register{
-    font-size: 30px;
-    color: rgb(243, 0, 0);
-    text-align: center;
-    margin-top: 100px;
 
 
-}
 h2{
     font-size: 30px;
     color: #fff;
@@ -51,10 +45,12 @@ h2{
 
 .input-group{
     position: relative;
-    margin: 30px 0;
-    border-bottom: 2px solid #fff;
-
+    margin: 17px 3px;  
 }
+
+/* #satu{
+     border-bottom: 2px solid #fff;
+ } */
 
 .input-group label{
     position: absolute;
@@ -67,35 +63,30 @@ h2{
 }
 
 .input-group input{
-    width: 320px;
-    height: 100px;
-    font-size: 16px;
+    margin-bottom: 2px;
+    width: 300px;
+    height: 50px;
+    font-size: 12px;
     color: #fff;
-    padding: 0 5px;
+    padding: 0 1px;
     background: transparent;
     border: none;
     outline: none;
+    border-bottom: 1px solid #fff;
 
 }
 
-.remember{
-    margin: -5px 0 15px  5px;
-}
-
-.remember label{
-    color: #fff;
-    font-size: 14px;
-}
+/* .id input {
+    margin-bottom: 100px;
+    position: absolute;
+} */
 
 
-.remember label input{
-    accent-color: #f4157e;
-
-}
 
 button {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    width: 77%;
     height: 40px;
     background: #f4157e;
     font-size: 16px;
@@ -112,9 +103,12 @@ button:hover{
 }
 
 .signUp-link{
+    position: absolute;
     font-size: 14px;
-    text-align: center;
-    margin: 15px 0;
+    /* text-align: center; */
+    right: 120px;
+    bottom: 25px ;
+
 
 }
 
@@ -133,6 +127,3 @@ button:hover{
     text-decoration: underline;
 }
 
-/* h2.register {
-    color: red;
-} */

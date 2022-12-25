@@ -41,9 +41,9 @@ if(isset($_POST["submit"])){
     <div class="wrapper">
         <div class="form-wrapper sign-in">
             <form action="" method="POST" autocomplete="off">
-                <h2 class="register">Sign In</h2>
+                <h2 class="">Sign In</h2>
                 <div class="input-group">
-                    <input type="text" placeholder="Name" name="nama" required >
+                    <input id="satu" type="text" placeholder="Name" name="nama" required >
                     <label for=""></label>
                 </div>
                 <div class="input-group">
@@ -58,12 +58,12 @@ if(isset($_POST["submit"])){
                     <input type="password" name="password" placeholder="Password" required>
                     <label for=""></label>
                 </div>
-                <div class="input-group">
+                <div class="input-group ">
                     <input type="password" name="confirmpassword" placeholder="Konfirmasi Password" required>
                     <label for=""></label>
                 </div>
                
-                <button type="submit" name="submit">Sign</button>
+                <button class="id" type="submit" name="submit">Sign</button>
                 <div class="signUp-link">
                     <p>Tidak Punya akun? <a href="login.php">SignUp</a></p>
                 </div>

@@ -44,7 +44,9 @@ body{
 h2{
     font-size: 30px;
     color: #fff;
-    text-align: center;
+    position: absolute;
+    top: 40px;
+    left: 140px;
 
 
 }
@@ -53,23 +55,18 @@ h2{
     position: relative;
     margin: 30px 0;
     border-bottom: 2px solid #fff;
-
+    margin-top: -30px;
 }
 
-.input-group label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
+form{
+    margin-top: -30px;
 }
 
 .input-group input{
-    width: 320px;
-    height: 100px;
-    font-size: 16px;
+    width: 300px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 14px;
     color: #fff;
     padding: 0 5px;
     background: transparent;
@@ -78,24 +75,11 @@ h2{
 
 }
 
-.remember{
-    margin: -5px 0 15px  5px;
-}
 
-.remember label{
-    color: #fff;
-    font-size: 14px;
-}
-
-
-.remember label input{
-    accent-color: #f4157e;
-
-}
 
 button {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 60%;
     height: 40px;
     background: #f4157e;
     font-size: 16px;
@@ -104,6 +88,8 @@ button {
     cursor: pointer;
     border: none;
     outline: none;
+    bottom: 120px;
+    left: 70px;
 }
 
 button:hover{
@@ -114,7 +100,9 @@ button:hover{
 .signUp-link{
     font-size: 14px;
     text-align: center;
-    margin: 15px 0;
+    bottom: 60px;
+    right: 130px;
+    position: absolute;
 
 }
 
