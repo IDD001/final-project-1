@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Des 2022 pada 19.15
--- Versi server: 10.4.25-MariaDB
--- Versi PHP: 8.1.10
+-- Generation Time: Dec 28, 2022 at 10:03 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mahasiswa`
+-- Table structure for table `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
@@ -35,10 +35,10 @@ CREATE TABLE `mahasiswa` (
   `kelas` varchar(100) NOT NULL,
   `angkatan` varchar(100) NOT NULL,
   `semester` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `mahasiswa`
+-- Dumping data for table `mahasiswa`
 --
 
 INSERT INTO `mahasiswa` (`id`, `nama`, `nim`, `email`, `kelas`, `angkatan`, `semester`) VALUES
@@ -261,7 +261,7 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `nim`, `email`, `kelas`, `angkatan`, `sem
 (218, 'Nilson Elcombe', '764133565', 'nelcombe61@cocolog-nifty.com', 'IF21A', '2020', '5'),
 (219, 'Jessalin Swanton', '785167690', 'jswanton62@infoseek.co.jp', 'IF21D', '2018', '5'),
 (220, 'Frayda Aitcheson', '578639662', 'faitcheson63@bbc.co.uk', 'IF21B', '2020', '3'),
-(221, 'Abigale Gilbard', '371701639', 'agilbard64@studiopress.com', 'IF21B', '2018', '4'),
+(221, 'Abigale Gilbard', '371701639', 'agilbard64@studiopress.com', 'IF21B', '2018', '5'),
 (222, 'Rinaldo Ivanishchev', '602418675', 'rivanishchev65@123-reg.co.uk', 'IF21E', '2018', '2'),
 (223, 'Carlyle Sweeting', '493871601', 'csweeting66@cbslocal.com', 'IF21A', '2021', '2'),
 (224, 'Sherm Pointer', '494456471', 'spointer67@yahoo.co.jp', 'IF21F', '2017', '2'),
@@ -727,7 +727,7 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `nim`, `email`, `kelas`, `angkatan`, `sem
 (683, 'Shelly Redrup', '873899275', 'sredrupiy@cargocollective.com', 'IF21D', '2021', '2'),
 (684, 'Carlita Ingray', '476602425', 'cingrayiz@dailymotion.com', 'IF21B', '2020', '3'),
 (685, 'Antoni Laraway', '27265330', 'alarawayj0@google.cn', 'IF21D', '2018', '5'),
-(686, 'Abigale Dunford', '982793258', 'adunfordj1@marketwatch.com', 'IF21B', '2020', '3'),
+(686, 'Abigale Dunford', '982793258', 'adunfordj1@marketwatch.com', 'IF21B', '2020', '5'),
 (687, 'Melinda Wildblood', '789546034', 'mwildbloodj2@altervista.org', 'IF21A', '2019', '4'),
 (688, 'Guglielma Hardson', '783499011', 'ghardsonj3@istockphoto.com', 'IF21B', '2019', '1'),
 (689, 'Adolphus Jepensen', '765195519', 'ajepensenj4@chron.com', 'IF21E', '2019', '3'),
@@ -1046,27 +1046,108 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `nim`, `email`, `kelas`, `angkatan`, `sem
 (1003, 'Wana Widana', '111111111111', 'hinataa4901@gmail.com', 'IF21E', '2021', '2'),
 (1004, 'Shadam', '21416255201920', 'yogajr145@gmail.com', 'IF21R', '2021', '1'),
 (1005, 'EMBRAYYYY', '21212121212', 'EMBRAY@GMAIL.com', 'IF21E', '2021', '3'),
-(1012, 'asaasa', '1111111111', 'aa@gmail.com', 'IF21B', '2018', '6');
+(1012, 'asaasa', '1111111111', 'aa@gmail.com', 'IF21B', '2018', '6'),
+(1019, 'dado', '20210221212', 'dado@gmail.com', 'IF21B', '2021', '3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nilai`
+--
+
+CREATE TABLE `nilai` (
+  `id_user` int(11) NOT NULL,
+  `pbo` int(11) NOT NULL,
+  `adbo` int(11) NOT NULL,
+  `pweb` int(11) NOT NULL,
+  `basdat` int(11) NOT NULL,
+  `daa` int(11) NOT NULL,
+  `imk` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `nilai`
+--
+
+INSERT INTO `nilai` (`id_user`, `pbo`, `adbo`, `pweb`, `basdat`, `daa`, `imk`) VALUES
+(686, 70, 100, 66, 77, 66, 66);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `username`, `email`, `password`) VALUES
+(1, 'admin', 'admin', 'admin@gmail.com', '123');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `mahasiswa`
+-- Indexes for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- Indexes for table `nilai`
+--
+ALTER TABLE `nilai`
+  ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `id_user` (`id_user`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `mahasiswa`
+-- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1018;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1020;
+
+--
+-- AUTO_INCREMENT for table `nilai`
+--
+ALTER TABLE `nilai`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=687;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `nilai`
+--
+ALTER TABLE `nilai`
+  ADD CONSTRAINT `nilai_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `mahasiswa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
