@@ -175,7 +175,7 @@ class Operations extends Dbconfig{
         return $tmp;
     }
     
-    // 
+    // function relasi
     public function Get_Nilai_Byid($id)
     {
         global $db;
@@ -185,6 +185,7 @@ class Operations extends Dbconfig{
         return $result->fetch_assoc();
     }
 
+    //function update nilai
     public function Update_nilai($id, $data){
         global $db;
         $sql = "UPDATE nilai SET 
@@ -196,6 +197,7 @@ class Operations extends Dbconfig{
         return $result;
     }
 
+    // Function tambah nilai
     public function Add_nilai($id, $data){
         global $db;
         $query = "INSERT INTO nilai (id_user, pbo, adbo, pweb, basdat, daa, imk) VALUE ($id, $data[pbo], $data[adbo], $data[pweb], $data[basdat], $data[daa], $data[imk])";

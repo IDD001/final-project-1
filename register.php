@@ -41,7 +41,7 @@ if(isset($_POST["submit"])){
     <div class="wrapper">
         <div class="form-wrapper sign-in">
             <form action="" method="POST" autocomplete="off">
-                <h2 class="">Sign In</h2>
+                <h2 class="">Sign Up</h2>
                 <div class="input-group">
                     <input id="satu" type="text" placeholder="Name" name="nama" required >
                     <label for=""></label>
